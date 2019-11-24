@@ -33,22 +33,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04" />
-    <Reference Include="DevComponents.Instrumentation, Version=14.0.0.15, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
-    <Reference Include="gdal_csharp">
-      <HintPath>F:\ShareCache\朱金顺_1901110542\MASI-TES\packages\GDAL.2.4.2\lib\net40\gdal_csharp.dll</HintPath>
+    <Reference Include="gdalconst_csharp, Version=1.0.7127.27225, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.2.4.2\lib\net40\gdalconst_csharp.dll</HintPath>
     </Reference>
-    <Reference Include="MapControl">
-      <HintPath>..\..\..\TodoList\Code\MapControl\MapControl\bin\Debug\MapControl.dll</HintPath>
-    </Reference>
-    <Reference Include="MapObject">
-      <HintPath>..\..\..\TodoList\Code\MASI-TES\MapObject\bin\Debug\MapObject.dll</HintPath>
+    <Reference Include="gdal_csharp, Version=1.0.7127.27225, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.2.4.2\lib\net40\gdal_csharp.dll</HintPath>
     </Reference>
     <Reference Include="MapUserInterface">
       <HintPath>..\..\..\oldVersion\MapUI\bin\Debug\MapUserInterface.dll</HintPath>
     </Reference>
-    <Reference Include="ogr_csharp">
-      <HintPath>F:\ShareCache\朱金顺_1901110542\MASI-TES\packages\GDAL.2.4.2\lib\net40\ogr_csharp.dll</HintPath>
+    <Reference Include="ogr_csharp, Version=1.0.7127.27224, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.2.4.2\lib\net40\ogr_csharp.dll</HintPath>
+    </Reference>
+    <Reference Include="osr_csharp, Version=1.0.7127.27224, Culture=neutral, PublicKeyToken=db5a52b08dc5b321, processorArchitecture=MSIL">
+      <HintPath>..\packages\GDAL.2.4.2\lib\net40\osr_csharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GdalConfiguration.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +83,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +96,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GdalConfiguration.vb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
